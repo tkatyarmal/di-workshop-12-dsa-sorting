@@ -1,0 +1,31 @@
+
+** Time how long to execute **
+
+-------- Method 1: --------
+
+function()  {
+var start = new Date()
+
+//code for algorithm goes here
+
+var end = new Date() - start
+console.log(end)
+}
+
+the problem with this is that its asynchronous. while it creates a new Date object, it also runs the next bit of code. THerefore this method isn't that effective when dealing with miniscual timings
+
+-------- Method 2: --------
+
+function()  {
+    //stuff
+}
+console.time('some string' + someVariable + 'some string continued')
+function()
+console.timeEnd('some string' + someVariable + 'some string continued')
+
+
+this is much more accurate in the time it takes to execute function
+
+** To look at **
+
+https://stackoverflow.com/questions/42406146/javascript-s-or-d-represents-string
