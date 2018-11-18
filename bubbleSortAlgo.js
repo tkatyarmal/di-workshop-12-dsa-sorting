@@ -16,17 +16,26 @@ function bubbleSort(a) {
     // stops running when no swaps hav occured
 }
 
-
 var ary = []
 
-for (var i = 0; i < 8; i++) {
-    var maxNum = Math.pow(10, i)
+for (var i = 0; i < 168; i++) {
+    // var maxNum = Math.pow(10, i)
 
+    //increments of 1000 till 150000 then incrmeents of 50000 till 1000000
+    var maxNum = 0 + (1000 * i)
+    if (maxNum > 150000) {
+        var temp = i - 150
+        maxNum = 150000 + (50000 * temp)
+    }
+
+    //generates random array
     for (var j = 0; j < maxNum; j++) {
         ary[j] = Math.floor(Math.random() * 10000000)
     }
 
+    //prints execution time
     console.time('For ' + maxNum + ' number it takes')
     bubbleSort(ary)
-    console.timeEnd('For ' + maxNum + ' number it takes')s
+    console.timeEnd('For ' + maxNum + ' number it takes')
 }
+
