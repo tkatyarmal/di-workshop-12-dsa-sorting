@@ -14,7 +14,6 @@ function selectionSort(a) {
     //continues for the next smallest number etc.
 }
 
-var ary = []
 
 for (var i = 0; i < 168; i++) {
 
@@ -26,6 +25,7 @@ for (var i = 0; i < 168; i++) {
     }
 
     //generates random array
+    var ary = []
     for (var j = 0; j < maxNum; j++) {
         ary[j] = Math.floor(Math.random() * 10000000)
     }
